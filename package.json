@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "framer-motion": "^10.16.4",
+    "styled-components": "^6.0.8"
+  }
+}
