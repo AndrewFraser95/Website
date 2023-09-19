@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import "../index.css";
+import "../styles/index.css";
 
 function getRandomColor() {
   const randomInt = (min, max) =>
@@ -70,9 +70,9 @@ const Planet = ({ size, speed, startColor, endColor }) => {
   });
 
   const controls = {
-    size: {
-      to: size * 1.2,
-      from: size * 0.8,
+    scale: {
+      to: 1.2,
+      from: 0.8,
       yoyo: Infinity,
       duration: speed,
     },
@@ -120,8 +120,8 @@ const Planet = ({ size, speed, startColor, endColor }) => {
         top: position.y - size / 2,
         left: position.x - size / 2,
       }}
-      initial={{ opacity: 1 }}
-      animate={controls}
+      initial={{ opacity: 1, scale: controls.scale[1] }}
+      animate={{ scale: controls.scale[1] }}
     ></motion.div>
   );
 };
