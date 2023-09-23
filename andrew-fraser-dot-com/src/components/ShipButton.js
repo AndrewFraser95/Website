@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "../styles/ShipButton.css";
 import { useNavigate } from "react-router-dom";
 
-const ShipButton = () => {
+const ShipButton = ({ buttonText }) => {
   const [isLaunching, setIsLaunching] = useState(false);
   const navigate = useNavigate();
 
-  const handleLaunch = () => {
+  const redirectToContactMe = () => {
     setIsLaunching(true);
     setTimeout(() => {
       setIsLaunching(false);
@@ -17,9 +17,9 @@ const ShipButton = () => {
   return (
     <button
       className={`ship-button ${isLaunching ? "active" : ""}`}
-      onClick={handleLaunch}
+      onClick={redirectToContactMe}
     >
-      Contact me
+      {buttonText}
     </button>
   );
 };

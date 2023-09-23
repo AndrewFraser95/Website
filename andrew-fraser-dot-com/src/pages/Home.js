@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <SpaceContainer>
       <h1 className="fade-in">Andrew Fraser</h1>
-      <SpaceButton />
-      <ShipButton />
+      <SpaceButton buttonText="About Me" />
+      <ShipButton buttonText="Contact Me" />
       <AnimatedComponents />
     </SpaceContainer>
   );

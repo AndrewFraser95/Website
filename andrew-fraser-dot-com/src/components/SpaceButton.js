@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "../styles/SpaceButton.css";
 import { useNavigate } from "react-router-dom";
 
-const SpaceButton = () => {
+const SpaceButton = ({ buttonText }) => {
   const [isLaunching, setIsLaunching] = useState(false);
   const navigate = useNavigate();
 
-  const handleLaunch = () => {
+  const redirectToAboutMe = () => {
     setIsLaunching(true);
     setTimeout(() => {
       setIsLaunching(false);
@@ -17,9 +17,9 @@ const SpaceButton = () => {
   return (
     <button
       className={`space-button ${isLaunching ? "active" : ""}`}
-      onClick={handleLaunch}
+      onClick={redirectToAboutMe}
     >
-      About me
+      {buttonText}
     </button>
   );
 };
