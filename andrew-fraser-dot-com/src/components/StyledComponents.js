@@ -6,8 +6,8 @@ export const SpaceContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #000; /* Black background for space */
-  color: #fff; /* White color for text */
+  background-color: #000;
+  color: #fff;
 `;
 
 export const Planet = styled.div`

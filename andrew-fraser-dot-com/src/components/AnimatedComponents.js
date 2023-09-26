@@ -145,7 +145,7 @@ const AnimatedComponents = () => {
   return (
     <div>
       <StarField />
-      <div style={{ margin: 0, overflow: "hidden" }}>
+      <div className="planet-container" style={{ margin: 0 }}>
         {planets.map((planet) => planet)}
       </div>
     </div>

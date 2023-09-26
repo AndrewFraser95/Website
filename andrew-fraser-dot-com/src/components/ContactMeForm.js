@@ -76,27 +76,40 @@ const ContactMeForm = () => {
       {showModal && (
         <div className="modal">
           <div className="modal-content">
-            <span className="close" onClick={() => setShowModal(false)}>
+            <div className="close" onClick={() => setShowModal(false)}>
               &times;
-            </span>
-            <h2 className="space-heading">Jokes, who uses emails anymore</h2>
-            <p className="">
+            </div>
+            <h2 className="space-heading">Jokes, who uses emails anymore?</h2>
+            <p className="grey-background">
               Hey Andy, Love the site. I'm <strong>{formData.name}.</strong>
               <br />
               <strong>{formData.message}</strong>
               <br />
-              If you want to reach me by email:<strong>{formData.email}</strong>
             </p>
-            <button onClick={() => copyToClipboard(formData)}>
-              Copy to Clipboard
-            </button>
-            <a
-              href="https://www.linkedin.com/in/andrew-fraser-programmer/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Click here to visit my LinkedIn profile
-            </a>
+            <div className="button-container">
+              <button
+                className="hundred-button"
+                onClick={() => copyToClipboard(formData)}
+              >
+                Copy to Clipboard
+              </button>
+              <a
+                href="https://www.linkedin.com/in/andrew-fraser-programmer/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fifty-button"
+              >
+                Visit my LinkedIn profile
+              </a>
+              <a
+                href="https://twitter.com/MeditatingLemur"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fifty-button"
+              >
+                Visit my Twitter/X profile
+              </a>
+            </div>
           </div>
         </div>
       )}
